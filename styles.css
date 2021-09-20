@@ -31,23 +31,29 @@ body {
     align-items: center;
 }
 
-.bio {
+.main-page {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.bio-background {
+.main-page-background {
     background-color: white;
     width: 620px;
     height: auto;
+    padding-bottom: 20px;
 }
 
-.bio-title {
+.main-page-title {
     text-align: center;
 }
 
-.bio-image {
+.main-page-subtitle {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.headshot-image {
     height: 300px;
     width: auto;
     display: block;
@@ -55,7 +61,24 @@ body {
     margin-right: auto;
 }
 
-.bio-text {
+.main-page-text {
     margin: 16px;
     text-align: center;
+}
+
+.main-page-duo-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-page-duo-list {
+    padding-left: 0px;
+}
+
+.envestnet-image {
+    height: auto;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
