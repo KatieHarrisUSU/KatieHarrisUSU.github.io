@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(158, 204, 235);
+}
+
+.navbar {
+    margin-top: 24px;
+    display: flex;
+  	justify-content: center;
+    align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px; 
+    margin-left: 16px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.top-image {
+    margin-top: 24px;
+    display: flex;
+  	justify-content: center;
+    align-items: center;
+}
+
+.bio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-background {
+    background-color: white;
+    width: 620px;
+    height: auto;
+}
+
+.bio-title {
+    text-align: center;
+}
+
+.bio-image {
+    height: 300px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bio-text {
+    margin: 16px;
+    text-align: center;
+}
