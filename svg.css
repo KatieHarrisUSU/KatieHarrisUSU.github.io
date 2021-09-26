@@ -1,0 +1,10 @@
+.cat-body {
+    fill: gray;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.cat-features {
+    fill: black;
+    stroke: black;
+}

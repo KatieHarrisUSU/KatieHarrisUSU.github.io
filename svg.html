@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS5820: Data Visualization</title>
+    <meta name="author" content="Katie Harris">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="svg.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="big5.html">Big 5 Personality</a>
+        <a href="svg.html">SVG</a>
+    </div>
+    <div class="top-image">
+        <img src="images/cat.png" alt="cat" />
+    </div>
+    <div class="main-page">
+        <div class="main-page-background">
+            <h1 class="main-page-title">A Cute Kitty SVG :3</h1>
+            <svg class="chart" width="600" height="300">
+                <path class="cat-body" d="m 300 200 c 11 -96 -7 -47 0 -104 a 10 10 0 0 0 -19 -7 c -3 43 11 70 0 100 m 0 0" 
+                    transform = "rotate(30 320 300)"/>
+                <polygon class="cat-body" points='240,95 250,10 300,90' />
+                <polygon class="cat-body" points='290,95 350,10 360,95' />
+                <rect class="cat-body" x="250" y="120" width="100" height="100" rx="15" />
+                <circle class="cat-body" cx="300" cy="100" r="60" />
+                <path class="cat-body" d="M300,222 a20,20 0 0, 0 -60,0 z" />
+                <path class="cat-body" d="M360,222 a20,20 0 0, 0 -60,0 z" />
+                <line class="cat-body" x1="260" y1="202" x2="260" y2="222" />
+                <line class="cat-body" x1="280" y1="202" x2="280" y2="222" />
+                <line class="cat-body" x1="320" y1="202" x2="320" y2="222" />
+                <line class="cat-body" x1="340" y1="202" x2="340" y2="222" />
+                <ellipse class="cat-features" cx="330" cy="90" rx="5" ry="15" />
+                <ellipse class="cat-features" cx="270" cy="90" rx="5" ry="15" />
+                <path class="cat-features" d="m 202 50 l 2.8 4.7 s 1.3 3 -1.82 3.22 l -5.4 0 s -3.28 -0.14 -1.74 -3.26 l 2.76 -4.7 s 1.7 -2.3 3.4 0 z" 
+                    transform="scale(1.5, -1.5) translate(0,-115)" />
+                <line class="cat-features" x1="200" y1="50" x2="250" y2="90" />
+                <line class="cat-features" x1="400" y1="60" x2="350" y2="20" transform="scale(1, -1) translate(0,-115)"/>
+                <line class="cat-features" x1="200" y1="-30" x2="250" y2="0" transform="scale(1, -1) translate(0,-115)"/>
+                <line class="cat-features" x1="400" y1="150" x2="350" y2="110" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
