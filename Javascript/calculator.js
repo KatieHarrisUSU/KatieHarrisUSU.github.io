@@ -5,24 +5,24 @@ class Calculator {
         this.varY = varY;
     }
 
-    setVarX(x) {
-        this.varX = x;
+    setVarX(varX) {
+        this.varX = varX;
     }
 
     getVarX() {
         return this.varX;
     }
 
-    setOperator(operator) {
-        this.operand = operator;
+    setOperand(operand) {
+        this.operand = operand;
     }
 
-    getOperator() {
+    getOperand() {
         return this.operand;
     }
 
-    setVarY(y) {
-        this.VarY = y;
+    setVarY(varY) {
+        this.VarY = varY;
     }
 }
 //////////////////////////////////////////////////////
@@ -30,12 +30,12 @@ class Calculator {
 //////////////////////////////////////////////////////
 
 // Get equation elements from user input
-const varX = prompt("Value of x");
-const operand = prompt("Operator");
-const varY = prompt("Value of y");
+const x = prompt("Value of x");
+const operator = prompt("Operator");
+const y = prompt("Value of y");
 
 // Create calculator object
-const calculator = new Calculator(varX, operand, varY);
+const calculator = new Calculator(x, operator, y);
 
 // Print entered equation elements
 document.write("You have entered : " + calculator.getVarX + " " + calculator.getOperator + " " + calculator.getVarY);
