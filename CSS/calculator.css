@@ -1,3 +1,30 @@
-body {
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#calculator-output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator-table {
     text-align: center;
+    width: 50%;
+}
+
+#calculator-table-header {
+    background-color: rgb(153, 142, 253);
+}
+
+#calculator-table-cell {
+    min-width: 15px;
+}
+
+#calculator-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
 }

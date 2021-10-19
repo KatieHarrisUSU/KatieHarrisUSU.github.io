@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS5820: Data Visualization</title>
+    <meta name="author" content="Katie Harris">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <script src="../Javascript/form.js"></script>
+</head>
+<body onload="loadFormData()">
+    <div class="navbar">
+        <a href="../HTML/index.html">Home</a>
+        <a href="../HTML/introduction.html">Introduction</a>
+        <a href="../HTML/big5.html">Big 5 Personality</a>
+        <a href="../HTML/svg.html">SVG</a>
+        <a href="../HTML/calculator.html">Calculator</a>
+        <a href="../HTML/form.html">Sign-up page</a>
+    </div>
+    <div class="top-image">
+        <img src="../images/cat.png" alt="cat" />
+    </div>
+    <div class="main-page">
+        <div class="main-page-background">
+            <h1 class="main-page-title">Sign-up</h1>
+            <div class="signup-form-div">
+                <form name="signupForm">
+                    <p class="form-element">
+                        <label class="form-label">Username: </label>
+                        <input type = "text" id="username" name="username">
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Email: </label>
+                        <input type = "text" id="email" name="email">
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Phone Number: </label>
+                        <input type = "text" id="phoneNumber" name="phoneNumber">
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Enter Password: </label>
+                        <input type = "password" id="password" name="password">
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Confirm Password: </label>
+                        <input type = "password" id="passwordCheck" name="passwordCheck">
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Gender: </label>
+                        <input type = "radio" id="female" name="gender" value="Female">
+                        <label for="female">Female </label>
+                        <input type = "radio" id="male" name="gender" value="Male">
+                        <label for="male">Male </label>
+                        <input type = "radio" id="other" name="gender" value="Other">
+                        <label for="other">Other </label>
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Birthdate:</label>
+                        <select id="month" name="birthdate">
+                            <option value="notSelected"></option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                        </select>
+                        <select id="day" name="birthdate">
+                            <!-- populated via javascript -->
+                        </select>
+                        <select id="year" name="birthdate">
+                            <!-- populated via javascript -->
+                        </select>
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label">Favorite Music Genres: </label>
+                        <input type = "checkbox" id="pop" name="musicGenre" value="Pop">
+                        <label for="pop">Pop </label>
+                        <input type = "checkbox" id="hiphop" name="musicGenre" value="Hip hop">
+                        <label for="hiphop">Hip hop </label>
+                        <input type = "checkbox" id="jazz" name="musicGenre" value="Jazz">
+                        <label for="jazz">Jazz </label>
+                        <input type = "checkbox" id="rock" name="musicGenre" value="Rock">
+                        <label for="rock">Rock </label>
+                        <input type = "checkbox" id="classical" name="musicGenre" value="Classical">
+                        <label for="classical">Classical </label>
+                        <input type = "checkbox" id="country" name="musicGenre" value="Country">
+                        <label for="country">Country </label>
+                        <br><br>
+                    </p>
+                    <p class="form-element">
+                        <label class="form-label"></label>
+                        <input type="button" value="Submit" onclick="onSubmit()">
+                        <input type="reset" value="Clear" style="margin-left: 5px">
+                    </p>
+                </form>
+                <div id="form-validations"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

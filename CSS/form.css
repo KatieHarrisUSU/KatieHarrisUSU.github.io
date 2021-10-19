@@ -1,0 +1,22 @@
+form {
+    display: table;
+}
+
+select {
+    margin-right: 5px;
+}
+
+.form-label {
+    display: table-cell;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.form-element {
+    display: table-row;
+}
+
+.signup-form-div {
+    display: flex;
+    justify-content: center;
+}
