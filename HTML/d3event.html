@@ -5,8 +5,9 @@
     <title>CS5820: Data Visualization</title>
     <meta name="author" content="Katie Harris">
     <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../CSS/calculator.css">
-    <script src="../Javascript/calculator.js" defer></script>
+    <link rel="stylesheet" href="../CSS/d3event.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../Javascript/d3event.js" charset="utf-8"></script>
 </head>
 <body>
     <div class="navbar">
@@ -23,9 +24,12 @@
     </div>
     <div class="main-page">
         <div class="main-page-background">
-            <h1 class="main-page-title">Calculator Output</h1>
-            <div id="calculator-output"></div>
-            <div id="calculator-overview"></div>
+            <h1 class="main-page-title">Interactive Social Media Icons (using D3)</h1>
+            <div id="d3-div"></div>
+            <div style="text-align:center">
+                Icons from 
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
         </div>
     </div>
 </body>
