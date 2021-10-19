@@ -20,3 +20,10 @@ select {
     display: flex;
     justify-content: center;
 }
+
+#form-validations {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 137px;
+}
