@@ -245,8 +245,8 @@ function onSubmit() {
     formErrors.innerHTML = "";
 
     // Complete form validation
-    let valid = validateFormInput();
-    let passwordsMatch = doPasswordsMatch();
+    const valid = validateFormInput();
+    const passwordsMatch = doPasswordsMatch();
 
     if(!valid) {
         console.log('invalid form inputs');
