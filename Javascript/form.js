@@ -228,8 +228,8 @@ function validateFormInput() {
 }
 
 function doPasswordsMatch() {
-    const password = document.getElementById('password');
-    const passwordCheck = document.getElementById('passwordCheck');
+    const password = document.getElementById('password').value;
+    const passwordCheck = document.getElementById('passwordCheck').value;
 
     // Check that it is the same as the first password entered
     if (passwordCheck != password) {
