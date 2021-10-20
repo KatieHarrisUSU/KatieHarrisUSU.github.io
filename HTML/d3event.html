@@ -7,30 +7,286 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/d3event.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="../Javascript/d3event.js" charset="utf-8"></script>
+    
 </head>
 <body>
-    <div class="navbar">
-        <a href="/">Home</a>
-        <a href="../HTML/introduction.html">Introduction</a>
-        <a href="../HTML/big5.html">Big 5 Personality</a>
-        <a href="../HTML/svg.html">SVG</a>
-        <a href="../HTML/calculator.html">Calculator</a>
-        <a href="../HTML/form.html">Sign-up page</a>
-        <a href="../HTML/d3event.html">D3 event</a>
-    </div>
-    <div class="top-image">
-        <img src="../images/cat.png" alt="cat" />
-    </div>
-    <div class="main-page">
-        <div class="main-page-background">
-            <h1 class="main-page-title">Interactive Social Media Icons (using D3)</h1>
-            <div id="d3-div"></div>
-            <div style="text-align:center">
-                Icons from 
-                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-            </div>
-        </div>
-    </div>
+    <script type="text/javascript">
+        // Re-create my nice theme using d3
+        // because I don't want to lose points XD
+
+        // Navbar
+        d3.select('body').append('div')
+            .attr('class', 'navbar');
+
+        let navbar = d3.select('.navbar');
+
+        // Navbar links
+        navbar.append('a')
+            .attr('href', '/')
+            .text('Home');
+        navbar.append('a')
+            .attr('href', '../HTML/introduction.html')
+            .text('Introduction');
+        navbar.append('a')
+            .attr('href', '../HTML/big5.html')
+            .text('Big 5 Personality');
+            navbar.append('a')
+            .attr('href', '../HTML/svg.html')
+            .text('SVG');
+        navbar.append('a')
+            .attr('href', '../HTML/calculator.html')
+            .text('Calculator');
+        navbar.append('a')
+            .attr('href', '../HTML/form.html')
+            .text('Sign-up page');
+        navbar.append('a')
+            .attr('href', '../HTML/d3event.html')
+            .text('D3 event');
+
+        // Cute page kitty  
+        d3.select('body').append('div')
+            .attr('class', 'top-image');
+
+        let topImage = d3.select('.top-image');
+
+        topImage.append('img')
+            .attr('src', '../images/cat.png')
+            .attr('alt', 'cat');
+
+        // Page content div
+        d3.select('body').append('div')
+            .attr('class', 'main-page');
+
+        let mainPage = d3.select('.main-page');
+
+        // Page contents
+        mainPage.append('div')
+            .attr('class', 'main-page-background');
+
+        let pageContents = d3.select('.main-page-background');
+        
+        pageContents.append('h2')
+            .attr('class', 'main-page-title')
+            .text('Interactive Social Media Icons using D3.js');
+
+        ///////////////////////////////////////////////////////
+        //                      Problem 3                    // 
+        ///////////////////////////////////////////////////////
+        var coordinates= d3.pointer(this);
+        var x = coordinates[0];
+        var y = coordinates[1];
+
+        // Create span element
+        pageContents.append('span')
+            .attr('class', 'd3-span')
+            .on('mousemove', (event) => {
+                // get mouse position
+                var coords = d3.pointer(event);
+
+                // display coordinates
+                updateDiv3Text(coords[0] + ', ' + coords[1]) 
+            });
+
+        let span = d3.select('.d3-span');
+
+        // Append social media images to span
+
+        // Twitter image element
+        span.append('img')
+            .attr('class', 'd3-icon')
+            .attr('id', 'twitter-icon')
+            .attr('src', '../images/twitter.png')
+            .attr('width', 100)
+            .attr('height', 100)
+            .on('mouseenter', function(){
+                updateDiv1Text('Twitter');
+                changeIconOpacity('#twitter-icon', 0.5);
+            })
+            .on('mouseleave', function(){
+                updateDiv2Text('Twitter');
+                changeIconOpacity('#twitter-icon', 1);
+            })
+            .on('dblclick', function(){
+                window.open('https://twitter.com', '_blank').focus();
+            })
+            .on('mousedown', function(){
+                spinIcon('#twitter-icon');
+            })
+            .on('mouseup', function(){
+                stopSpinIcon('#twitter-icon');
+            });
+
+        // Facebook image element
+        span.append('img')
+            .attr('class', 'd3-icon')
+            .attr('id', 'facebook-icon')
+            .attr('src', '../images/facebook.png')
+            .attr('width', 100)
+            .attr('height', 100)
+            .on('mouseenter', function(){
+                updateDiv1Text('Facebook');
+                changeIconOpacity('#facebook-icon', 0.5);
+            })
+            .on('mouseleave', function(){
+                updateDiv2Text('Facebook');
+                changeIconOpacity('#facebook-icon', 1);
+            })
+            .on('dblclick', function(){
+                window.open('https://facebook.com', '_blank').focus();
+            })
+            .on('mousedown', function(){
+                spinIcon('#facebook-icon');
+            })
+            .on('mouseup', function(){
+                stopSpinIcon('#facebook-icon');
+            });
+
+        // Reddit image element
+        span.append('img')
+            .attr('class', 'd3-icon')
+            .attr('id', 'reddit-icon')
+            .attr('src', '../images/reddit.png')
+            .attr('width', 100)
+            .attr('height', 100)
+            .on('mouseenter', function(){
+                updateDiv1Text('Reddit');
+                changeIconOpacity('#reddit-icon', 0.5);
+            })
+            .on('mouseleave', function(){
+                updateDiv2Text('Reddit');
+                changeIconOpacity('#reddit-icon', 1);
+            })
+            .on('dblclick', function(){
+                window.open('https://reddit.com', '_blank').focus();
+            })
+            .on('mousedown', function(){
+                spinIcon('#reddit-icon');
+            })
+            .on('mouseup', function(){
+                stopSpinIcon('#reddit-icon');
+            });
+
+        // Linkedin image element
+        span.append('img')
+            .attr('class', 'd3-icon')
+            .attr('id', 'linkedin-icon')
+            .attr('src', '../images/linkedin.png')
+            .attr('width', 100)
+            .attr('height', 100)
+            .on('mouseenter', function(){
+                updateDiv1Text('Linkedin');
+                changeIconOpacity('#linkedin-icon', 0.5);
+            })
+            .on('mouseleave', function(){
+                updateDiv2Text('Linkedin');
+                changeIconOpacity('#linkedin-icon', 1);
+            })
+            .on('dblclick', function(){
+                window.open('https://linkedin.com', '_blank').focus();
+            })
+            .on('mousedown', function(){
+                spinIcon('#linkedin-icon');
+            })
+            .on('mouseup', function(){
+                stopSpinIcon('#linkedin-icon');
+            });
+
+        // Instagram image element
+        span.append('img')
+            .attr('class', 'd3-icon')
+            .attr('id', 'instagram-icon')
+            .attr('src', '../images/instagram.png')
+            .attr('width', 100)
+            .attr('height', 100)
+            .on('mouseenter', function(){
+                updateDiv1Text('Instagram');
+                changeIconOpacity('#instagram-icon', 0.5);
+            })
+            .on('mouseleave', function(){
+                updateDiv2Text('Instagram');
+                changeIconOpacity('#instagram-icon', 1);
+            })
+            .on('dblclick', function(){
+                window.open('https://instagram.com', '_blank').focus();
+            })
+            .on('mousedown', function(){
+                spinIcon('#instagram-icon');
+            })
+            .on('mouseup', function(){
+                stopSpinIcon('#instagram-icon');
+            });
+
+        // Create div to hold the 3 div elements
+        pageContents.append('div')
+            .attr('class', 'd3-events-div')
+            .attr('width', 300)
+            .attr('height', 300);
+
+        let eventsDiv = d3.select('.d3-events-div');
+
+        // Create the 3 div elements
+        eventsDiv.append('div')
+            .attr('class', 'd3-event-div')
+            .attr('id', 'd3-div1')
+            .text('In: ');
+
+        eventsDiv.append('div')
+            .attr('class', 'd3-event-div')
+            .attr('id', 'd3-div2')
+            .text('Out: ');
+
+        eventsDiv.append('div')
+            .attr('class', 'd3-event-div')
+            .attr('id', 'd3-div3')
+            .text('Mouse X, Mouse Y: ');
+
+        // Function to update the text of div1
+        function updateDiv1Text(newText) {
+            let div1 = d3.select('#d3-div1');
+
+            div1.text('In:  ' + newText);
+        }
+
+        // Function to update the text of div1
+        function updateDiv2Text(newText) {
+            let div2 = d3.select('#d3-div2');
+
+            div2.text('Out:  ' + newText);
+        }
+
+        // Function to update the text of div1
+        function updateDiv3Text(newText) {
+            let div3 = d3.select('#d3-div3');
+
+            div3.text('Mouse X, Mouse Y:  ' + newText);
+        }
+
+        // Function to change icon opacity
+        function changeIconOpacity(iconId, opacity) {
+            let icon = d3.select(iconId);
+
+            // Lower opacity of icon
+            icon.style('opacity', opacity);
+        }
+
+        // Function to spin icon
+        function spinIcon(iconId) {
+            let icon = d3.select(iconId);
+
+            // Spin icon using CSS
+            icon.style('transition', 'all 5s linear');
+            icon.style('transform', 'rotate(360deg)');
+        }
+
+        // Function to stop icon spin
+        function stopSpinIcon(iconId) {
+            let icon = d3.select(iconId);
+
+            // stop icon spin
+            icon.style('transition', null);
+            icon.style('transform', null);
+        }
+
+    </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+.d3-span {
+    display: flex;
+    justify-content: center;
+}
+
+.d3-icon {
+    margin: 15px;
+}
+
+.d3-events-div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.d3-event-div {
+    text-align: left;
+}
